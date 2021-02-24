@@ -1,0 +1,30 @@
+{%extends "base.html"%}
+
+{% block head %}
+    <title>The Holographic ape</title>
+    <style>
+        body {
+         background: url("{{ url_for('static',filename='images/background.jpg') }}");
+         background-position: center center;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: cover;
+         background-color: #464646; 
+        }
+    </style>
+    {% endblock %}
+{% block body %}
+    <div class="heading" name="responsive" >
+        <h1 style="font-family: 'Dancing Script', cursive; text-align: center;font-size:12vw; color:#041a2f;position: relative;
+top: 150px;">The Holographic Ape</h1>
+    </div>
+    <div class="parastuff" name="aboutpara">
+        <p style="font-family:'Roboto', sans-serif; text-align: center;font-size:5vw; color:#000000;position: relative;
+top: 170px;"> Just thought the name sounded cool</p>
+    </div>
+    <a style="font-family:'Roboto', sans-serif; text-align: center;font-size:3vw; color:#000000;position: relative;
+top: 185px;left: 45%;" href="{{ url_for('articles') }}">Articles</a>
+    <a href="https://www.instagram.com/___tanush_/">
+ <img style="position: relative;top:235px;left: 37%;width: 4%; height: auto;" src="{{ url_for('static',filename='images/insta.png') }}">
+</a>
+    {% endblock %}
